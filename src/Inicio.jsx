@@ -6,6 +6,7 @@ import FormularioSaida from "./components/FormularioSaida"
 import Selecao from "./components/Selecao"
 import Texto from "./components/Texto"
 import Entrada from "./components/Entrada"
+import Legenda from "./components/Legenda"
 
 import Grade from "./datas/Grade"
 import Aulas from "./datas/Aulas"
@@ -21,7 +22,7 @@ export default function Inicio() {
             
             <Selecao 
                 value={ dados.fase } 
-                onChange={ e => definirDados({ ...dados, ["fase"]: e.target.value }) }>
+                onChange={ e => definirDados({ ...dados, fase: e.target.value }) }>
                 { /*Object.keys(Grade).map(function(trilha) {
                     return <optgroup key={trilha} label={trilha}>
                         { Grade[trilha].map(function(curso) {
@@ -36,7 +37,7 @@ export default function Inicio() {
 
             <Selecao
                 value={ dados.aula } 
-                onChange={ e => definirDados({ ...dados, ["aula"]: e.target.value }) }>
+                onChange={ e => definirDados({ ...dados, aula: e.target.value }) }>
                 { Aulas.map(function(aula) {
                     return <option key={aula} value={aula}>{aula}</option>
                 }) }
@@ -44,7 +45,7 @@ export default function Inicio() {
 
             <Selecao
                 value={ dados.semana } 
-                onChange={ e => definirDados({ ...dados, ["semana"]: e.target.value }) }>
+                onChange={ e => definirDados({ ...dados, semana: e.target.value }) }>
                 { Semana.map(function(dia) {
                     return <option key={dia} value={dia}>{dia}</option>
                 }) }
@@ -53,27 +54,28 @@ export default function Inicio() {
             <Texto 
                 placeholder="Material de referência"
                 value={ dados.material }
-                onChange={ e => definirDados({ ...dados, ["material"]: e.target.value }) }>
+                onChange={ e => definirDados({ ...dados, material: e.target.value }) }>
             </Texto>
 
             <Texto 
                 placeholder="Resumo da aula"
                 value={ dados.resumo }
-                onChange={ e => definirDados({ ...dados, ["resumo"]: e.target.value }) }>
+                onChange={ e => definirDados({ ...dados, resumo: e.target.value }) }>
             </Texto>
 
             <Texto 
                 placeholder="Diversão de casa"
                 value={ dados.diversao }
-                onChange={ e => definirDados({ ...dados, ["diversao"]: e.target.value }) }>
+                onChange={ e => definirDados({ ...dados, diversao: e.target.value }) }>
             </Texto>
 
             <Entrada 
                 type="text" 
                 placeholder="Instrutor" 
                 value={ dados.instrutor }
-                onChange={ e => definirDados({ ...dados, ["instrutor"]: e.target.value }) }/>
+                onChange={ e => definirDados({ ...dados, instrutor: e.target.value }) }/>
 
+            <Legenda/>
         </FormularioCampo>
 
         <FormularioSaida 

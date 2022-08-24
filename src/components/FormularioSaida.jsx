@@ -63,7 +63,7 @@ export default function FormularioSaida(props) {
             <ModeloLinha><br/></ModeloLinha>
 
             <ModeloLinha>Atenciosamente,</ModeloLinha>
-            <ModeloLinha>Instrutor { props.instrutor }.</ModeloLinha>
+            <ModeloLinha>Instrutor { props.instrutor }!</ModeloLinha>
 
         </ModeloMensagem>
     </Modelo>
