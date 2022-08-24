@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap");
+
+* {
+    color: #343a40;
+    font-family: "Quicksand", sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
+}
+
+body {
+    align-items: center;
+    background: #fff;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+::selection {
+    background: #f51b1b;
+    color: white;
+}
+
+input, 
+textarea,
+select {
+    outline: none;
+} 
+
+input:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid #ea5b5b;
+}
