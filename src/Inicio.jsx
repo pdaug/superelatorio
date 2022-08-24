@@ -10,11 +10,11 @@ import Entrada from "./components/Entrada"
 import Grade from "./datas/Grade"
 import Aulas from "./datas/Aulas"
 import Semana from "./datas/Semana"
+import EstadoInicial from "./datas/EstadoInicial"
 
 export default function Inicio() {
 
-    const dadosInicio = { fase: "Level 1 (Fase 0)", aula: "Aula 01", semana: "Segunda", material: "", resumo: "", diversao: "", instrutor: "" }
-    const [ dados, definirDados ] = useState(dadosInicio)
+    const [ dados, definirDados ] = useState(EstadoInicial)
 
     return <Formulario>
         <FormularioCampo>
@@ -22,13 +22,16 @@ export default function Inicio() {
             <Selecao 
                 value={ dados.fase } 
                 onChange={ e => definirDados({ ...dados, ["fase"]: e.target.value }) }>
-                { Object.keys(Grade).map(function(trilha) {
+                { /*Object.keys(Grade).map(function(trilha) {
                     return <optgroup key={trilha} label={trilha}>
                         { Grade[trilha].map(function(curso) {
                             return <option key={curso} value={curso}>{curso}</option>
                         }) }
                     </optgroup>
-                }) }   
+                })*/ } 
+                { Grade.map(function(curso) {
+                    return <option key={curso} value={curso}>{curso}</option>
+                }) }  
             </Selecao>
 
             <Selecao

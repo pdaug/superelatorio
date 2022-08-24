@@ -1,10 +1,9 @@
-import React from "react"
 import styled from "styled-components"
 
 const Entrada = styled.input`
-    border: 1px solid #ced4da;
+    border: 1px solid #ccc;
     border-radius: 3px;
-    padding: 4px;
+    padding: 6px 10px;
 `
 
 export default Entrada

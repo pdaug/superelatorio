@@ -2,17 +2,18 @@ import React from "react"
 import styled from "styled-components"
 
 const Modelo = styled.div`
-    border: 1px solid #ced4da;
-    border-radius: 3px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 4px 4px 12px rgba(100, 100, 100, 0.5);
     display: flex;
+    overflow: hidden;
     width: 760px;
 
     @media only screen and (max-width: 800px) {
-        border: none;
         border-radius: 0;
-        width: 100vw;
+        box-shadow: none;
         flex-direction: column;
-        min-height: 100vh;
+        width: 100vw;
     }
 `
 
