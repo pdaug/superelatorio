@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/superelatorio/static/js/main.03fa57cb.js",
+    "main.js": "/superelatorio/static/js/main.cd79805a.js",
     "index.html": "/superelatorio/index.html",
-    "main.03fa57cb.js.map": "/superelatorio/static/js/main.03fa57cb.js.map"
+    "main.cd79805a.js.map": "/superelatorio/static/js/main.cd79805a.js.map"
   },
   "entrypoints": [
-    "static/js/main.03fa57cb.js"
+    "static/js/main.cd79805a.js"
   ]
 }
