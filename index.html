@@ -1,1 +1,146 @@
-<!doctype html><html lang="pt-BR"><head><meta name="viewport" content="width=device-width,initial-scale=1"/><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><meta name="author" content="https://github.com/pdrusr"/><title>SUPERELATORIO</title><link rel="stylesheet" href="/style.css"/><link rel="shortcut icon" href="/favicon.png" type="image/png"/><script defer="defer" src="/static/js/main.c0cc41ab.js"></script></head><body><div id="superelatorio"></div></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="pdrusr">
+        <meta name="description" content="Plataforma para a criação de Relatórios e Feedback para aulas.">
+        <meta name="keywords" content="superelatorio, supergeeks, pdrusr">
+        <title> SUPERELATORIO </title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="shortcut icon" href="./favicon.png" type="image/png">
+    </head>
+    <body>
+
+        <div class="menu" style="display: flex;">
+
+            <button onclick="AbrirRelatorio()"> Relatório </button>
+
+            <button onclick="AbrirFeedback()"> Feedback </button>
+
+            <a href="https://github.com/pdrusr"> @pdrusr </a>
+
+        </div>
+
+        <div class="janela" id="relatorio" style="display: none;">
+
+            <select name="fase">
+                <optgroup label="Super Kids">
+                    <option> SuperKids Maker </option>
+                    <option> SuperKids IoT </option>
+                </optgroup>
+                <optgroup label="Regular I">
+                    <option> Level 0 </option>
+                    <option> Level 1 (Fase 0) </option>
+                    <option> Level 1 (Fase 1) </option>
+                    <option> Level 2 (Fase 2) </option>
+                    <option> Level 2 (Fase 3) </option>
+                </optgroup>
+                <optgroup label="Regular II">
+                    <option> Level 3 Web (Fase 4) </option>
+                    <option> Level 3 Web (Fase 5) </option>
+                    <option> Level 3 Games (Fase 4) </option>
+                    <option> Level 3 Games (Fase 5) </option>
+                </optgroup>
+                <optgroup label="Expert Games">
+                    <option> Expert Games 1 </option>
+                    <option> Expert Games 2 </option>
+                    <option> Expert Games 3 </option>
+                </optgroup>
+                <optgroup label="Expert Web">
+                    <option> Expert Web 1 </option>
+                    <option> Expert Web 2 </option>
+                    <option> Expert Web 3 </option>
+                </optgroup>
+                <optgroup label="Antigo Expert Games">
+                    <option> Fase 6 Games </option>
+                    <option> Fase 7 Games </option>
+                    <option> Fase 8 Games </option>
+                    <option> Fase 9 Games </option>
+                </optgroup>
+                <optgroup label="Antigo Expert Web">
+                    <option> Fase 6 Web </option>
+                    <option> Fase 7 Web </option>
+                    <option> Fase 8 Web </option>
+                    <option> Fase 9 Web </option>
+                </optgroup>
+                <optgroup label="Robótica">
+                    <option> Robótica 0 </option>
+                    <option> Robótica 1</option>
+                    <option> Robótica 2 </option>
+                    <option> Robótica 3 </option>
+                </optgroup>
+                <optgroup label="MasterGeeks">
+                    <option> MasterGeeks 1 </option>
+                    <option> MasterGeeks 2 </option>
+                    <option> MasterGeeks 3 </option>
+                </optgroup>
+                <optgroup label="Bootcamp">
+                    <option> Bootcamp </option>
+                </optgroup>
+            </select>
+
+            <select name="aula">
+                <option> Aula 01 </option>
+                <option> Aula 02 </option>
+                <option> Aula 03 </option>
+                <option> Aula 04 </option>
+                <option> Aula 05 </option>
+                <option> Aula 06 </option>
+                <option> Aula 07 </option>
+                <option> Aula 08 </option>
+                <option> Aula 09 </option>
+                <option> Aula 10 </option>
+                <option> Aula 11 </option>
+                <option> Aula 12 </option>
+                <option> Aula 13 </option>
+                <option> Aula 14 </option>
+                <option> Aula 15 </option>
+                <option> Aula 16 </option>
+                <option> Aula TCC </option>
+            </select>
+
+            <select name="semana">
+                <option> Segunda </option>
+                <option> Terça </option>
+                <option> Quarta </option>
+                <option> Quinta </option>
+                <option> Sexta </option>
+                <option> Sábado </option>
+            </select>
+
+            <textarea name="material" placeholder="Material de referência" rows="3"></textarea>
+
+            <textarea name="resumo" placeholder="Resumo da aula" rows="3"></textarea>
+
+            <textarea name="tarefa" placeholder="Diversão de casa" rows="3"></textarea>
+
+            <input type="text" name="instrutorrelatorio" placeholder="Instrutor(a)">
+
+            <button onclick="CopiarRelatorio()"> Copiar Relatório </button>
+
+        </div>
+
+        <div class="janela" id="feedback" style="display: none;">
+
+            <select name="feedback">
+                <option> 1º Feedback </option>
+                <option> 2º Feedback </option>
+                <option> 3º Feedback </option>
+                <option> 4º Feedback </option>
+            </select>
+            
+            <input type="text" name="aluno" placeholder="Nome aluno(a)">
+
+            <textarea name="conteudo" placeholder="Observações..." rows="5"></textarea>
+            
+            <input type="text" name="instrutorfeedback" placeholder="Instrutor(a)">
+
+            <button onclick="CopiarFeedback()"> Copiar Feedback </button>
+
+        </div>
+
+        <script src="./script.js"></script>
+
+    </body>
+</html>
