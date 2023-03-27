@@ -22,9 +22,21 @@ function CopiarRelatorio() {
 
     navigator.clipboard.writeText(mensagem)
 
-    alert("Relatório copiado com sucesso!")
+        .then(function() {
+        
+            alert("Relatório copiado com sucesso!")
 
-    localStorage.setItem("instrutor", textoInstrutor)
+            localStorage.setItem("instrutor", textoInstrutor)
+        
+        })
+    
+        .catch(function(erro) {
+        
+            alert("Falha ao copiar o Relatório!")
+        
+            console.log(erro)
+        
+        })
 
 }
 
@@ -60,9 +72,22 @@ function CopiarFeedback() {
 
     navigator.clipboard.writeText(mensagem)
 
-    alert("Feedback copiado com sucesso!")
+        .then(function() {
     
-    localStorage.setItem("instrutor", textoInstrutor)
+            alert("Feedback copiado com sucesso!")
+
+            localStorage.setItem("instrutor", textoInstrutor)
+        
+        })
+    
+        .catch(function(erro) {
+        
+            alert("Falha ao copiar o Feedback!")
+        
+            console.log(erro)
+        
+        })
+        
 }
 
 const menu = document.querySelector("div.menu")
