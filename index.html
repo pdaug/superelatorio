@@ -1,146 +1,302 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+
+<html lang="pt-BR" translate="no">
+
     <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="pdrusr">
-        <meta name="description" content="Plataforma para a criação de Relatórios e Feedback para aulas.">
-        <meta name="keywords" content="superelatorio, supergeeks, pdrusr">
+
+        <meta charset="utf-8"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <meta name="author" content="pdaug"/>
+
+        <meta name="description" content="Aplicação web para a auxiliar a construção de relatórios de aulas e feedback de alunos."/>
+
+        <meta name="keywords" content="feedback, aulas, relatorio, alunos, superelatorio"/>
+
         <title> SUPERELATORIO </title>
-        <link rel="stylesheet" href="./style.css">
-        <link rel="shortcut icon" href="./favicon.png" type="image/png">
+        
+        <link rel="stylesheet" href="./style.css"/>
+
+        <link rel="shortcut icon" href="./favicon.svg" type="image/xml+svg"/>
+
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+
     </head>
-    <body>
 
-        <div class="menu" style="display: flex;">
+    <body class="bg-gray-100 flex flex-col items-center justify-center h-screen w-full">
 
-            <button onclick="AbrirRelatorio()"> Relatório </button>
+        <div class="menu bg-white flex-col w-96 p-4 space-y-2 rounded" style="display: flex;">
+                
+            <i class="ph ph-paperclip text-4xl text-center text-gray-500 py-4"></i>
+            
+            <button class="bg-gray-500 hover:bg-gray-600 p-4 rounded" title="Acessar janela do relatório" onclick="AbrirRelatorio()"> 
+                
+                <span class="text-white"> Relatório </span> 
+            
+            </button>
 
-            <button onclick="AbrirFeedback()"> Feedback </button>
+            <button class="bg-gray-500 hover:bg-gray-600 p-4 rounded" title="Acessar janela do feedback" onclick="AbrirFeedback()"> 
+                
+                <span class="text-white"> Feedback  </span>
+            
+            </button>
 
-            <a href="https://github.com/pdaug"> @pdaug </a>
+            <a href="https://github.com/pdaug/superelatorio" class="text-center text-gray-500" target="_blank" rel="noopener noreferrer" title="Acessar o respositório do GitHub">
+
+                <span> GitHub </span> 
+
+            </a>
 
         </div>
 
-        <div class="janela" id="relatorio" style="display: none;">
+        <div class="janela bg-white flex-col w-96 p-4 space-y-2 rounded" id="relatorio" style="display: none;">
 
-            <select name="fase">
+            <select name="fase" class="bg-gray-100 text-gray-500 p-2 rounded" title="Selecione a fase">
+
                 <optgroup label="Super Kids">
+
                     <option> SuperKids Maker </option>
+
                     <option> SuperKids IoT </option>
+
                 </optgroup>
+
                 <optgroup label="Regular I">
+
                     <option> Level 0 </option>
+
                     <option> Level 1 (Fase 0) </option>
+
                     <option> Level 1 (Fase 1) </option>
+
                     <option> Level 2 (Fase 2) </option>
+
                     <option> Level 2 (Fase 3) </option>
+
                 </optgroup>
+
                 <optgroup label="Regular II">
+
                     <option> Level 3 Web (Fase 4) </option>
+
                     <option> Level 3 Web (Fase 5) </option>
+
                     <option> Level 3 Games (Fase 4) </option>
+
                     <option> Level 3 Games (Fase 5) </option>
+
                 </optgroup>
+
                 <optgroup label="Expert Games">
+
                     <option> Expert Games 1 </option>
+
                     <option> Expert Games 2 </option>
+
                     <option> Expert Games 3 </option>
+
                 </optgroup>
+
                 <optgroup label="Expert Web">
+
                     <option> Expert Web 1 </option>
+
                     <option> Expert Web 2 </option>
+
                     <option> Expert Web 3 </option>
+
                 </optgroup>
+
                 <optgroup label="Antigo Expert Games">
+
                     <option> Fase 6 Games </option>
+
                     <option> Fase 7 Games </option>
+
                     <option> Fase 8 Games </option>
+
                     <option> Fase 9 Games </option>
+
                 </optgroup>
+
                 <optgroup label="Antigo Expert Web">
+
                     <option> Fase 6 Web </option>
+
                     <option> Fase 7 Web </option>
+
                     <option> Fase 8 Web </option>
+
                     <option> Fase 9 Web </option>
+
                 </optgroup>
+
                 <optgroup label="Robótica">
+
                     <option> Robótica 0 </option>
+
                     <option> Robótica 1</option>
+
                     <option> Robótica 2 </option>
+
                     <option> Robótica 3 </option>
+
                 </optgroup>
+
                 <optgroup label="MasterGeeks">
+
                     <option> MasterGeeks 1 </option>
+
                     <option> MasterGeeks 2 </option>
+
                     <option> MasterGeeks 3 </option>
+
                 </optgroup>
+
                 <optgroup label="Bootcamp">
+
                     <option> Bootcamp </option>
+
                 </optgroup>
+
             </select>
 
-            <select name="aula">
+            <select name="aula" class="bg-gray-100 text-gray-500 p-2 rounded" title="Selecione a aula">
+
                 <option> Aula 01 </option>
+
                 <option> Aula 02 </option>
+
                 <option> Aula 03 </option>
+
                 <option> Aula 04 </option>
+
                 <option> Aula 05 </option>
+
                 <option> Aula 06 </option>
+
                 <option> Aula 07 </option>
+
                 <option> Aula 08 </option>
+
                 <option> Aula 09 </option>
+
                 <option> Aula 10 </option>
+
                 <option> Aula 11 </option>
+
                 <option> Aula 12 </option>
+
                 <option> Aula 13 </option>
+
                 <option> Aula 14 </option>
+
                 <option> Aula 15 </option>
+
                 <option> Aula 16 </option>
+
                 <option> Aula TCC </option>
+
             </select>
 
-            <select name="semana">
+            <select name="semana" class="bg-gray-100 text-gray-500 p-2 rounded" title="Selecione o dia da semana">
+
                 <option> Segunda </option>
+
                 <option> Terça </option>
+
                 <option> Quarta </option>
+
                 <option> Quinta </option>
+
                 <option> Sexta </option>
+
                 <option> Sábado </option>
+
             </select>
 
-            <textarea name="material" placeholder="Material de referência" rows="3"></textarea>
+            <textarea class="bg-gray-100 text-gray-500 p-2 rounded" name="material" placeholder="Material de referência" rows="1"></textarea>
 
-            <textarea name="resumo" placeholder="Resumo da aula" rows="3"></textarea>
+            <textarea class="bg-gray-100 text-gray-500 p-2 rounded" name="resumo" placeholder="Resumo da aula" rows="3"></textarea>
 
-            <textarea name="tarefa" placeholder="Diversão de casa" rows="3"></textarea>
+            <textarea class="bg-gray-100 text-gray-500 p-2 rounded" name="tarefa" placeholder="Diversão de casa" rows="3"></textarea>
 
-            <input type="text" name="instrutorrelatorio" placeholder="Instrutor(a)">
+            <input class="bg-gray-100 text-gray-500 p-2 rounded" type="text" name="instrutorrelatorio" placeholder="Instrutor(a)">
 
-            <button onclick="CopiarRelatorio()"> Copiar Relatório </button>
+            <div class="flex space-x-2">
 
+                <button class="bg-gray-100 p-2 rounded" title="Voltar ao menu" onclick="Voltar()">
+
+                    <i class="ph ph-arrow-left text-gray-500"></i>
+
+                </button>
+
+                <button class="bg-gray-500 hover:bg-gray-600 p-2 rounded flex-1" onclick="CopiarRelatorio()"> 
+                    
+                    <span class="text-white"> Copiar Relatório  </span>
+                
+                </button>
+                
+                <button class="bg-gray-100 p-2 rounded" title="Download em PDF" onclick="SalvarRelatorio()">
+
+                    <i class="ph ph-file-pdf"></i>
+
+                </button>
+
+            </div>
         </div>
 
-        <div class="janela" id="feedback" style="display: none;">
+        <div class="janela bg-white flex-col w-96 p-4 space-y-2 rounded" id="feedback" style="display: none;">
 
-            <select name="feedback">
+            <select name="feedback" class="bg-gray-100 text-gray-500 p-2 rounded" title="Selecione o feedback">
+
                 <option> 1º Feedback </option>
+
                 <option> 2º Feedback </option>
+
                 <option> 3º Feedback </option>
+
                 <option> 4º Feedback </option>
+
             </select>
             
-            <input type="text" name="aluno" placeholder="Nome aluno(a)">
+            <input class="bg-gray-100 text-gray-500 p-2 rounded" type="text" name="aluno" placeholder="Nome aluno(a)">
 
-            <textarea name="conteudo" placeholder="Observações..." rows="5"></textarea>
+            <textarea class="bg-gray-100 text-gray-500 p-2 rounded" name="conteudo" placeholder="Observações..." rows="3"></textarea>
             
-            <input type="text" name="instrutorfeedback" placeholder="Instrutor(a)">
+            <input class="bg-gray-100 text-gray-500 p-2 rounded" type="text" name="instrutorfeedback" placeholder="Instrutor(a)">
 
-            <button onclick="CopiarFeedback()"> Copiar Feedback </button>
+            <div class="flex items-center space-x-2">
+
+                <button class="bg-gray-100 p-2 rounded" title="Voltar ao menu" onclick="Voltar()">
+
+                    <i class="ph ph-arrow-left text-gray-500"></i>
+
+                </button>
+
+                <button class="bg-gray-500 hover:bg-gray-600 p-2 rounded flex-1" onclick="CopiarFeedback()"> 
+                    
+                    <span class="text-white"> Copiar Feedback </span>
+
+                </button>
+                
+                <button class="bg-gray-100 p-2 rounded" title="Download em PDF" onclick="SalvarFeedback()">
+
+                    <i class="ph ph-file-pdf text-gray-500"></i>
+
+                </button>
+
+            </div>
 
         </div>
+
+        <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
 
         <script src="./script.js"></script>
 
     </body>
+
 </html>
