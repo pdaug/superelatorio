@@ -16,7 +16,8 @@ Abaixo estão todas as melhorias que foram desenvolvidas até o momento e as pr�
 - [x] Menu de escolha
 - [x] Criar Feedbacks
 - [x] Botão para voltar ao menu
-- [ ] Download de modelo PDF
+- [x] Download de modelo PDF
+- [ ] Janela feedback final
 
 ## Tecnologias
 
@@ -26,4 +27,4 @@ Caso esteja interessado em entender quais tecnologias foram utilizadas para dese
 - [Picsum Photos](https://picsum.photos/)
 - [Tailwind CSS](https://tailwindcss.com/docs/installation)
 - [Phosphor Icons](https://phosphoricons.com/)
-
+- [JsPDF](https://rawgit.com/MrRio/jsPDF/master/docs/index.html)
