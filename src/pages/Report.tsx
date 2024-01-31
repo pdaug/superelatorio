@@ -42,7 +42,7 @@ const Report = function() {
                         return (
                             <optgroup key={ keyOptionGroupElement } label={ optionGroupLabel }>
                                 {
-                                    Courses[optionGroupLabel].map(function(optionName) {
+                                    Courses[optionGroupLabel as keyof typeof Courses].map(function(optionName) {
                                         const keyOptionElement = uuidv4();
                                         return (
                                             <option key={ keyOptionElement }>
