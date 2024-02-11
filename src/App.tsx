@@ -1,17 +1,15 @@
 import Pages from "./pages/index.tsx";
 import { Background, Window } from "./components/index.tsx";
 
-const App = function() {
-
-    return(
+const App = function () {
+    return (
         <>
-            <Background/>
+            <Background />
             <Window>
-                <Pages/>
+                <Pages />
             </Window>
         </>
     );
-
 };
 
 export default App;

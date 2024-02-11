@@ -1,12 +1,15 @@
 import type { LocalStorageKeys } from "../types/LocalStorageKeys";
 
-const LocalStorageSet = function(key: LocalStorageKeys, value: string | object): boolean {
+const LocalStorageSet = function (
+    key: LocalStorageKeys,
+    value: string | object,
+): boolean {
     try {
-        const valueTransformed = (typeof value === "string") ? value : JSON.stringify(value);
+        const valueTransformed =
+            typeof value === "string" ? value : JSON.stringify(value);
         localStorage.setItem(key, valueTransformed);
         return true;
-    }   
-    catch(error) {
+    } catch (error) {
         console.error("[src/functions/LocalStorageSet.ts]", error);
         return false;
     }

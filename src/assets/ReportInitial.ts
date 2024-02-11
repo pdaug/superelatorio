@@ -1,4 +1,4 @@
-import LocalStorageGet from "../functions/LocalstorageGet";
+import LocalStorageGet from "../functions/LocalStorageGet";
 
 const ReportInitial = {
     course: "",
