@@ -3,7 +3,7 @@ const Courses = {
         "SuperKids Maker",
         "SuperKids IoT",
     ],
-    "Coddy Buddy": [
+    "Code Buddy": [
         "Lógica 1",
         "Lógica 2",
         "Games 1",

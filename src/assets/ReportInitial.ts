@@ -1,11 +1,13 @@
+import LocalStorageGet from "../functions/LocalstorageGet";
+
 const ReportInitial = {
     course: "",
-    class: "",
-    weekday: "",
+    class: LocalStorageGet("class"),
+    weekday: LocalStorageGet("weekday"),
     content: "",
     resume: "",
     homework: "",
-    teacher: "",
+    teacher: LocalStorageGet("teacher"),
 };
 
 export default ReportInitial;
