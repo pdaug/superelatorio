@@ -25,9 +25,7 @@ const Modal = function ({ show, setShow, message }: ModalProps) {
         <>
             {show && (
                 <div className="absolute h-screen w-screen flex items-center justify-center top-0 left-0 bg-[rgba(0,0,0,.5)] z-50">
-                    <div className="bg-white rounded-lg p-4 shadow-lg">
-                        {message}
-                    </div>
+                    <div className="bg-white rounded-lg p-4 shadow-lg">{message}</div>
                 </div>
             )}
         </>

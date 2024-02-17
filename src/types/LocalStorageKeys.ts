@@ -1,1 +1,1 @@
-export type LocalStorageKeys = "teacher" | "weekday" | "class";
+export type LocalStorageKeys = "teacher" | "weekday" | "class" | "stage";

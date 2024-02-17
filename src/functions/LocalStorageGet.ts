@@ -1,4 +1,4 @@
-import type { LocalStorageKeys } from "../types/LocalStorageKeys";
+import type { LocalStorageKeys } from "../types/LocalStorageKeys.ts";
 
 const LocalStorageGet = function (key: LocalStorageKeys): string {
     const data = localStorage.getItem(key);

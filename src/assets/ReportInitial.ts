@@ -1,9 +1,9 @@
-import LocalStorageGet from "../functions/LocalStorageGet";
+import LocalStorageGet from "../functions/LocalStorageGet.ts";
 
 const ReportInitial = {
-    course: "",
-    class: LocalStorageGet("class"),
-    weekday: LocalStorageGet("weekday"),
+    course: "SuperKids Maker",
+    class: LocalStorageGet("class") || "Aula 01",
+    weekday: LocalStorageGet("weekday") || "Segunda-feira",
     content: "",
     resume: "",
     homework: "",
